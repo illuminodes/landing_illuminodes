@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: 'Righteous';
+    src: url('../assets/fonts/Righteous-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../assets/fonts/JosefinSans.ttf');
+}
+
+
