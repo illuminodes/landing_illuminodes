@@ -1,21 +1,15 @@
 #!/bin/bash
 
-# Check if the correct number of arguments is passed
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <binary_name> <version_number>"
-    exit 1
-fi 
-
 # Define variables
-BINARY_NAME="$1" # Name of the binary file for your Rust project
+BINARY_NAME="landing_illuminodes" # Name of the binary file for your Rust project
 BUILD_DIR="$BINARY_NAME"     # Path for the new directory to store build artifacts
-SERVER_USER=""                   # Your server's username
-SERVER_IP=""                    # Your server's IP address
-SERVER_DEST_PATH=""       # Destination path on the server
+SERVER_USER="illuminodes"                   # Your server's username
+SERVER_IP="50.116.20.217"                    # Your server's IP address
+SERVER_DEST_PATH="/home/illuminodes/"       # Destination path on the server
 
 # Compile optimized release build
 echo "Building $BINARY_NAME Executable..."
-cargo build --release --bin $BINARY_NAME
+cargo build --release
 
 # Check if build was successful
 if [ $? -ne 0 ]; then
@@ -25,9 +19,7 @@ fi
 
 # Build JS files
 echo "Building JS/CSS files project..."
-bun js:prod 
-bun tailwind:prod
-
+tailwindcss -i src/frontend/tailwind.css -o public/styles/prodv2.css -minify
 # Prepare the build directory
 echo "Preparing build directory..."
 mkdir -p "$BUILD_DIR"

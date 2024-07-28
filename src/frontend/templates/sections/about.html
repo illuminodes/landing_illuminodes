@@ -1,0 +1,26 @@
+<div
+    class="flex flex-col items-center justify-center gap-4 z-20 text-center  mt-4 mx-16 sm:mt-8 sm:mx-32 md:mt-16 md:mx-48">
+    <h3 id="about-us">About Us</h3>
+    <div class="flex flex-col items-center gap-8 text-center relative">
+        <img src="../assets/backgrounds/purple-background.png" alt="Purple Background"
+            class="w-full sm:scale-50 z-10 absolute sm:-translate-y-64" />
+        <div class="flex flex-col items-center gap-8 md:gap-16 text-center z-20">
+            <h2>illuminodes</h2>
+            <p class="max-w-lg">{{crate::consts::WEBSITE_ABOUT_US}}</p>
+            <div class="flex flex-col sm:flex-row  justify-center items-center gap-8 text-center">
+                <div class="flex flex-col max-w-sm items-center gap-8 text-center">
+                    <img src="../assets/icons/knowledge.png" alt="lightbulb Icon" class="h-24 sm:h-36" />
+                    <h4>illuminate</h4>
+                    <p class="align-top m-0">{{crate::consts::WEBSITE_ILLUMINATE}}</p>
+                </div>
+                <h5 class="text-8xl font-bold text-nostr-light">+</h5>
+                <div class="flex flex-col max-w-sm items-center gap-8 text-center xl:-translate-y-4">
+                    <img src="../assets/icons/nodes.png" alt="Nodes Icon" class="h-24 sm:h-36" />
+                    <h4>nodes</h4>
+                    <p class="align-top m-0">{{crate::consts::WEBSITE_NODES}}</p>
+                </div>
+            </div>
+            <p>{{crate::consts::WEBSITE_FOUNDERS}}</p>
+        </div>
+    </div>
+</div>

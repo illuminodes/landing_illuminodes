@@ -11,16 +11,18 @@
     <script src="../js/json-enc.js"></script>
 
     <!-- Tailwindcss -->
-    <link href="../styles/main.css" rel="stylesheet"/>
+    <link href="../styles/prod.css" rel="stylesheet" />
 
     <title>
         {% block title %}
         {% endblock %}
     </title>
 
+    <link class="bg-white rounded-full" rel="icon" type="image/jpeg" href="../assets/icons/illumGray.png">
+
 </head>
 
-<body>
+<body class="h-dvh w-dvw flex overflow-y-auto bg-nostr-black text-nostr-white">
     {% block content %}{% endblock %}
 </body>
 

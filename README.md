@@ -1,10 +1,18 @@
-# HAT Stack 
+# Illuminodes Landing Page
 
-Simple DEMO of HTMX templates being served over Axum. Styling is handled using taliwind.
+El [sitio web](https://www.illuminodes.com/) web landing de Illuminodes.
 
-## Support 
+## Tecnologías
 
-I'm a third world developer doing fun open source stuff. If you liked this project throw me some sats:
+Este proyecto esta desarollado en [Rust]() y construido con las siguientes tecnologías:
 
-- BC1QRZSUAC0N0KKWZS24RQ5P3NF0UH2ZPQ86ER55CS
+- [HTMX](https://htmx.org/docs/) - para interactividad en el frontend
+- [Axum](https://github.com/tokio-rs/axum) - como servidor de HTML
+- [Tailwind CSS](https://tailwindcss.com/) - para estilos
 
+## Contribuir
+
+Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
+
+- Si quieres sugerir un tema de discusión, puedes abrir un [issue](https://github.com/illuminodes/nostr-devs/issues/new)
+- Si deseas contribuir con código, puedes hacer un [fork](https://github.com/illuminodes/nostr-devs/fork) de este repositorio y envia un [pull request](https://github.com/illuminodes/nostr-devs/pulls)

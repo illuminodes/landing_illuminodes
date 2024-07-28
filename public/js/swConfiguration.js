@@ -1,0 +1,1 @@
+var r=async()=>{if("serviceWorker"in navigator)try{const e=await navigator.serviceWorker.register("/sw.js",{scope:"/"});if(e.installing)console.log("Service worker installing");else if(e.waiting)console.log("Service worker installed");else if(e.active)console.log("Service worker active")}catch(e){console.error(`Registration failed with ${e}`)}};r();
