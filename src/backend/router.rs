@@ -1,14 +1,14 @@
 use axum::{routing, serve, Router};
 use backend::{consts::TCP_ADDRESS, handlers::homepage};
 use tower_http::services::ServeDir;
-use tracing::info;
+use tracing::{info, error};
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 #[derive(Debug)]
 pub enum Errors {
     NotFound,
     AddrInUse,
-    ServerError,
+    ServerError(String),
 }
 
 #[tokio::main]
@@ -19,9 +19,10 @@ async fn main() -> Result<(), Errors> {
     let router = pages_router(static_files);
     let listener = tcp_listener().await?;
     info!("Server started at: http://{}", TCP_ADDRESS);
-    serve(listener, router)
-        .await
-        .map_err(|_| Errors::ServerError)?;
+    if let Err(e) = serve(listener, router).await {
+        error!("Server error: {}", e.to_string());
+        return Err(Errors::ServerError(e.to_string()));
+    }
     Ok(())
 }
 

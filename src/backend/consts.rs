@@ -1,5 +1,10 @@
 // CONFIGS
 pub const TCP_ADDRESS: &str = "0.0.0.0:4242";
+#[cfg(debug_assertions)]
+pub const CSS_STYLESHEET: &str = "../styles/main.css";
+
+#[cfg(not(debug_assertions))]
+pub const CSS_STYLESHEET: &str = "../styles/prod-V1.css";
 
 // EXTERNAL LINKS
 pub const GITHUB_LINK: &str = "https://github.com/illuminodes/nostr-devs";
@@ -37,9 +42,11 @@ pub const WEBSITE_MISSION: &str = r#"
 pub const WEBSITE_VISION: &str = r#"
     Changing the way the world interacts with your identity.
 "#;
-pub const WEBSITE_PHILOSOPHY: &str = r#"
+pub const WEBSITE_PHILOSOPHY_1: &str = r#"
     illuminodes was founded to build the tools and technologies to enable sovereign identities 
     within the new digital era. We stand on the shoulders of giants in the world of cryptography. 
+"#;
+pub const WEBSITE_PHILOSOPHY_2: &str = r#"
     By leveraging technologies like Bitcoin and Nostr, we can build and take control of our decentralized future, 
     removing single points of failure.
 "#;

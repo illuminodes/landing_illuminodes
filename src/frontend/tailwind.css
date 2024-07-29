@@ -4,10 +4,10 @@
 
 @layer base {
     h1 {
-        @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-nowrap font-nostr-bold mb-4
+        @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-wrap sm:text-nowrap font-nostr-bold;
     }
     h2 {
-        @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-nowrap font-nostr-bold mb-4;
+        @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-nowrap font-nostr-bold;
     }
     h3 {
         @apply text-xl font-bold text-nowrap font-nostr-bold p-4 border-b-nostr-light border-b-2 mb-4 sm:mb-16 z-20;
